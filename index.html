@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classifieds - Buy & Sell Used Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            🛒
+            <div>
+                <h1>Classifieds</h1>
+                <p>Buy and Sell Used Products</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#products">Buy</a>
+            <a href="#sell">Sell</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Find Great Deals<br>On Used Products</h2>
+            <p>Buy. Sell. Reuse. Save the Planet.</p>
+
+            <button onclick="scrollToProducts()">
+                Start Exploring →
+            </button>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80">
+    </section>
+
+    <!-- Search -->
+    <section class="search-box">
+        <input type="text" id="searchInput" placeholder="🔍 Search products...">
+        <button onclick="searchProducts()">Search</button>
+    </section>
+
+    <!-- Products -->
+    <section id="products">
+        <div class="title-row">
+            <h2>Used Products</h2>
+
+            <select id="category" onchange="filterProducts()">
+                <option value="all">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="furniture">Furniture</option>
+                <option value="sports">Sports</option>
+            </select>
+        </div>
+
+        <div class="product-container" id="productContainer">
+
+            <!-- Product 1 -->
+            <div class="product-card" data-category="electronics">
+                <img src="https://images.unsplash.com/photos

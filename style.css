@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f1f6fa;
+    color: #17233d;
+}
+
+/* Header */
+
+header {
+    background: #1674df;
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo:first-child {
+    font-size: 35px;
+}
+
+.logo h1 {
+    font-size: 32px;
+}
+
+.logo p {
+    font-size: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+/* Hero */
+
+.hero {
+    margin: 15px 2%;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-text {
+    width: 50%;
+    padding: 35px;
+}
+
+.hero-text h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-text button {
+    background: #1674df;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hero img {
+    width: 50%;
+    height: 240px;
+    object-fit: cover;
+}
+
+/* Search */
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
+
+.search-box input {
+    width: 50%;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px 0 0 6px;
+    font-size: 16px;
+}
+
+.search-box button {
+    width: 130px;
+    border: none;
+    background: #1674df;
+    color: white;
+    font-size: 16px;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
+
+/* Products */
+
+#products {
+    padding: 0 2%;
+}
+
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.title-row h2 {
+    font-size: 28px;
+}
+
+.title-row select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.product-card {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.product-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 10px 5px 5px;
+}
+
+.product-card p {
+    color: #666;
+    margin: 5px;
+}
+
+.product-card h4 {
+    color: #1674df;
+    font-size: 21px;
+    margin: 10px 5px;
+}
+
+.product-card button {
+    width: 100%;
+    padding: 12px;
+    background: #1674df;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Sell */
+
+.sell-section {
+    background: white;
+    margin: 35px 2%;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.sell-section h2 {
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    gap: 15px;
+}
+
+.form input {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form button {
+    background: #18a957;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Message */
+
+#message {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #20a957;
+    color: white;
+    padding: 18px 25px;
+    border-radius: 5px;
+}
+
+/* Footer */
+
+footer {
+    background: #263449;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-text,
+    .hero img {
+        width: 100%;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    .search-box input {
+        width: 70%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text h2 {
+        font-size: 28px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
