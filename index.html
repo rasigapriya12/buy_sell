@@ -1,67 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classifieds - Buy & Sell Used Products</title>
+    <title>Classifieds</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            🛒
-            <div>
-                <h1>Classifieds</h1>
-                <p>Buy and Sell Used Products</p>
-            </div>
+<header>
+    <div class="logo">
+        🛒
+        <div>
+            <h1>Classifieds</h1>
+            <p>Buy and Sell Used Products</p>
         </div>
+    </div>
 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#products">Buy</a>
-            <a href="#sell">Sell</a>
-            <a href="#">About</a>
-        </nav>
-    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Buy</a>
+        <a href="#sell">Sell</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
 
-    <!-- Hero Section -->
+<main>
+
+    <!-- Hero -->
     <section class="hero">
-        <div class="hero-text">
+        <div>
             <h2>Find Great Deals<br>On Used Products</h2>
             <p>Buy. Sell. Reuse. Save the Planet.</p>
-
-            <button onclick="scrollToProducts()">
-                Start Exploring →
-            </button>
+            <button onclick="explore()">Start Exploring →</button>
         </div>
 
         <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80">
     </section>
 
     <!-- Search -->
-    <section class="search-box">
-        <input type="text" id="searchInput" placeholder="🔍 Search products...">
-        <button onclick="searchProducts()">Search</button>
-    </section>
+    <div class="search">
+        <input type="text" id="search" placeholder="🔍 Search products...">
+        <button onclick="searchProduct()">Search</button>
+    </div>
 
     <!-- Products -->
     <section id="products">
-        <div class="title-row">
+
+        <div class="title">
             <h2>Used Products</h2>
 
             <select id="category" onchange="filterProducts()">
                 <option value="all">All Categories</option>
-                <option value="electronics">Electronics</option>
-                <option value="furniture">Furniture</option>
-                <option value="sports">Sports</option>
+                <option value="phone">Phones</option>
+                <option value="laptop">Laptops</option>
+                <option value="bike">Bicycles</option>
+                <option value="table">Furniture</option>
             </select>
         </div>
 
-        <div class="product-container" id="productContainer">
+        <div class="products" id="productList">
 
-            <!-- Product 1 -->
-            <div class="product-card" data-category="electronics">
-                <img src="https://images.unsplash.com/photos
+            <div class="card" data-category="phone">
+                <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=600&q=80">
+                <h3>Samsung Phone</h3>
+                <p>Good condition</p>
+                <b>₹12,000</b>
+                <button onclick="buy('Samsung Phone')">🛒 Buy Now</button>
+            </div>
+
+            <div class="card" data-category="laptop">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80">
+                <h3>HP Laptop</h3>
+                <p>Used for 1 year</p>
+                <b>₹30,000</b>
+                <button onclick="buy('HP Laptop')">🛒 Buy Now</button>
+            </div>
+
+            <div class="card" data-category="bike">
+                <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=600&q=80">
+                <h3>Mountain Bicycle</h3>
+                <p>Good condition</p>
+                <b>₹8,000</b>
+                <button onclick="buy('Mountain Bicycle')">🛒 Buy Now</button>
+            </div>
+
+            <div class="card" data-category="table">
+                <img src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=600&q=80">
+                <h3>Wooden Table</h3>
+                <p>Lightly used</p>
+                <b>₹5,000</b>
+                <button onclick="buy('Wooden Table')">🛒 Buy Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sell -->
+    <section id="sell" class="sell">
+
+        <h2>➕ Sell Your Product</h2>
+
+        <form id="sellForm">
+
+            <div>
+                <label>Product Name</label>
+                <input id="name" placeholder="Enter product name" required>
+            </div>
+
+            <div>
+                <label>Price (₹)</label>
+                <input id="price" type="number" placeholder="Enter price" required>
+            </div>
+
+            <div>
+                <label>Condition</label>
+                <input id="condition" placeholder="Good, Like New, Used" required>
+            </div>
+
+            <div>
+                <label>Image URL</label>
+                <input id="image" placeholder="Enter image URL">
+            </div>
+
+            <button type="submit">Add Product</button>
+
+        </form>
+
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Classifieds</h2>
+        <p>Buy and sell useful second-hand products easily.</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Classifieds. All rights reserved.</p>
+    <p>🌱 Reuse Today for a Better Tomorrow!</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
