@@ -6,80 +6,82 @@
 }
 
 body {
-    background: #f1f6fa;
-    color: #17233d;
+    background: #f4f7fb;
+    color: #101b3b;
 }
 
 /* Header */
 
 header {
-    background: #1674df;
+    background: linear-gradient(110deg, #1468d9, #2388ee);
     color: white;
-    padding: 15px 5%;
+    padding: 15px 4%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 }
 
-.logo:first-child {
-    font-size: 35px;
+.logo:first-letter {
+    font-size: 40px;
 }
 
 .logo h1 {
-    font-size: 32px;
+    font-size: 38px;
 }
 
 .logo p {
-    font-size: 15px;
+    font-size: 17px;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
     font-size: 18px;
+}
+
+/* Main */
+
+main {
+    width: 96%;
+    max-width: 1250px;
+    margin: auto;
 }
 
 /* Hero */
 
 .hero {
-    margin: 15px 2%;
+    margin-top: 15px;
     background: white;
     border-radius: 10px;
     display: flex;
-    align-items: center;
     overflow: hidden;
+    align-items: center;
 }
 
-.hero-text {
+.hero div {
     width: 50%;
     padding: 35px;
 }
 
-.hero-text h2 {
-    font-size: 38px;
-    margin-bottom: 15px;
+.hero h2 {
+    font-size: 40px;
 }
 
-.hero-text p {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.hero-text button {
-    background: #1674df;
-    color: white;
-    border: none;
-    padding: 13px 22px;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
+.hero p {
+    font-size: 21px;
+    margin: 15px 0;
+    color: #555;
 }
 
 .hero img {
@@ -88,205 +90,203 @@ nav a {
     object-fit: cover;
 }
 
+button {
+    border: none;
+    cursor: pointer;
+}
+
 /* Search */
 
-.search-box {
+.search {
     display: flex;
-    justify-content: center;
-    margin: 25px;
+    gap: 10px;
+    max-width: 760px;
+    margin: 25px auto;
 }
 
-.search-box input {
-    width: 50%;
+.search input {
+    flex: 1;
     padding: 16px;
-    border: 1px solid #ddd;
-    border-radius: 6px 0 0 6px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
 
-.search-box button {
-    width: 130px;
-    border: none;
-    background: #1674df;
+.search button {
+    background: #1677e8;
     color: white;
-    font-size: 16px;
-    border-radius: 0 6px 6px 0;
-    cursor: pointer;
+    padding: 15px 35px;
+    border-radius: 6px;
+}
+
+/* Product title */
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.title h2 {
+    font-size: 30px;
+}
+
+.title select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
 
 /* Products */
 
-#products {
-    padding: 0 2%;
-}
-
-.title-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.title-row h2 {
-    font-size: 28px;
-}
-
-.title-row select {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.product-container {
+.products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 12px;
 }
 
-.product-card {
+.card {
     background: white;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px #ddd;
+    box-shadow: 0 1px 5px #0001;
 }
 
-.product-card img {
+.card img {
     width: 100%;
     height: 170px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
-.product-card h3 {
-    margin: 10px 5px 5px;
+.card h3 {
+    margin: 10px 5px;
 }
 
-.product-card p {
+.card p {
     color: #666;
     margin: 5px;
 }
 
-.product-card h4 {
-    color: #1674df;
-    font-size: 21px;
-    margin: 10px 5px;
+.card b {
+    display: block;
+    color: #1473dd;
+    font-size: 20px;
+    margin: 8px 5px;
 }
 
-.product-card button {
+.card button {
     width: 100%;
-    padding: 12px;
-    background: #1674df;
-    border: none;
+    padding: 13px;
+    background: #1677e8;
     color: white;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 /* Sell */
 
-.sell-section {
+.sell {
     background: white;
-    margin: 35px 2%;
-    padding: 25px;
+    margin-top: 35px;
+    padding: 20px;
     border-radius: 8px;
 }
 
-.sell-section h2 {
-    margin-bottom: 20px;
+.sell h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
 }
 
-.form {
-    display: flex;
+form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto;
     gap: 15px;
+    margin-top: 20px;
+    align-items: end;
 }
 
-.form input {
-    flex: 1;
+form label {
+    display: block;
+    margin-bottom: 7px;
+}
+
+form input {
+    width: 100%;
     padding: 13px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.form button {
-    background: #18a957;
+form button {
+    background: #18a34a;
     color: white;
-    border: none;
-    padding: 13px 20px;
+    padding: 14px 20px;
     border-radius: 5px;
-    cursor: pointer;
 }
 
-/* Message */
+/* About */
 
-#message {
-    display: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #20a957;
-    color: white;
-    padding: 18px 25px;
-    border-radius: 5px;
+.about {
+    text-align: center;
+    padding: 30px;
 }
 
 /* Footer */
 
 footer {
-    background: #263449;
+    margin-top: 20px;
+    background: #273343;
     color: white;
-    padding: 20px 5%;
+    padding: 20px 4%;
     display: flex;
     justify-content: space-between;
 }
 
 /* Mobile */
 
-@media (max-width: 800px) {
+@media(max-width: 900px) {
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    form {
+        grid-template-columns: 1fr 1fr;
+    }
 
     header {
         flex-direction: column;
         gap: 15px;
     }
+}
 
-    nav a {
-        margin: 5px;
-    }
+@media(max-width: 600px) {
 
     .hero {
-        flex-direction: column;
+        display: block;
     }
 
-    .hero-text,
+    .hero div,
     .hero img {
         width: 100%;
     }
 
-    .product-container {
-        grid-template-columns: repeat(2, 1fr);
+    .hero h2 {
+        font-size: 30px;
     }
 
-    .form {
-        flex-direction: column;
-    }
-
-    .search-box input {
-        width: 70%;
-    }
-}
-
-@media (max-width: 500px) {
-
-    .product-container {
+    .products {
         grid-template-columns: 1fr;
     }
 
-    .hero-text h2 {
-        font-size: 28px;
+    form {
+        grid-template-columns: 1fr;
     }
 
     footer {
-        flex-direction: column;
-        gap: 10px;
+        display: block;
+        text-align: center;
     }
 }
